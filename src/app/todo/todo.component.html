@@ -1,0 +1,35 @@
+<div class="todo-container">
+  <h2 class="todo-title">Создать заметку</h2>
+  <div class="todo-input">
+    <input type="text" [(ngModel)]="newTodoTitle" placeholder="Название заметки">
+    <button pButton type="button" label="" (click)="addTodo()"><img src="../assets/send1.svg" alt=""></button>
+  </div>
+
+  <h2 class="todo-title">Создать заметку</h2>
+
+
+  <div class="todo-filters">
+    <label for="todoFilter">Показывать </label>
+    <select class="todo-filter" id="todoFilter" [(ngModel)]="filter" (change)="loadTodos()">
+      <option value="all">Все заметки</option>
+      <option value="active">Активные</option>
+      <option value="completed">Завершенные</option>
+    </select>
+  </div>
+
+  <ng-container *ngIf="todos$ | async as todos">
+    <div class="todo-list">
+      <div class="todo-item" *ngFor="let todo of todos">
+        <div class="todo-checkbox">
+          <p-checkbox [binary]="true" [ngModel]="todo.completed" (onChange)="updateTodoStatus(todo, $event)"></p-checkbox>
+        </div>
+        <div class="todo-title2">{{ todo.title }}</div>
+        <div class="todo-actions">
+          <button pButton type="button" icon="pi pi-trash" (click)="deleteTodo(todo.id)"><img src="../assets/del1.svg" alt=""></button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+

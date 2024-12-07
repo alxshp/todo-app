@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+body {
+  font-family: 'SF UI Display', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F7F8FA;
+}
+
+
+
+.star-icon {
+  width: 14px;
+  fill: #757986;
+  cursor: pointer;
+}
+
+.create-button {
+  background-color: #21A5B9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-right: 76px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.trash {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 150px;
+  width: 50px;
+}

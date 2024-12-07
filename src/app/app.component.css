@@ -1,0 +1,209 @@
+.container {
+  background-color: var(--Layout-BG, #f7f8fa);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 60px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding-right: 20px;
+  }
+}
+
+.note-section {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Layout-White, #fff);
+  filter: drop-shadow(0px 0px 1px rgba(76, 93, 112, 0.3)) drop-shadow(0px 2px 4px rgba(76, 93, 112, 0.24));
+  overflow: hidden;
+  position: relative;
+  min-height: 620px;
+  width: 100%;
+  padding: 69px 76px;
+  align-items: start;
+}
+
+@media (max-width: 991px) {
+  .note-section {
+    max-width: 100%;
+    margin-right: 9px;
+    padding: 0 20px;
+  }
+}
+
+.note-section__bg {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.note-section__title {
+  position: relative;
+  color: var(--Text-Main, #434652);
+  font: 500 18px/133% SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.note-section__input-wrapper {
+  position: relative;
+  display: flex;
+  margin-top: 19px;
+  width: 359px;
+  max-width: 100%;
+  gap: 0px;
+  font-size: 14px;
+  color: var(--Text-Disable, #bcbfcc);
+  font-weight: 400;
+  line-height: 143%;
+}
+
+.note-section__input {
+  font-family: SF UI Display, sans-serif;
+  border-radius: 2px 0px 0px 2px;
+  border: 1px solid rgba(216, 218, 224, 1);
+  background-color: var(--Layout-White, #fff);
+  width: fit-content;
+  padding: 15px 12px;
+}
+
+@media (max-width: 991px) {
+  .note-section__input {
+    padding-right: 20px;
+  }
+}
+
+.note-section__create-icon {
+  aspect-ratio: 1;
+  width: 40px;
+}
+
+.note-section__list-title {
+  position: relative;
+  color: var(--Text-Main, #434652);
+  margin-top: 57px;
+  font: 500 18px/133% SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .note-section__list-title {
+    margin-top: 40px;
+  }
+}
+
+.note-section__filters {
+  position: relative;
+  display: flex;
+  margin-top: 18px;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 143%;
+}
+
+.note-section__filter {
+  color: var(--Text-Secondary, #757885);
+  font-family: SF UI Display, sans-serif;
+  font-weight: 500;
+  flex-grow: 1;
+  margin: auto 0;
+}
+
+.note-section__filter-button {
+  border-radius: 2px;
+  border: 1px solid rgba(216, 218, 224, 1);
+  background-color: var(--Layout-White, #fff);
+  display: flex;
+  gap: 20px;
+  color: var(--Text-Main, #434652);
+  justify-content: center;
+  flex-grow: 1;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.note-section__filter-button--active {
+  background-color: var(--Text-Main, #434652);
+  color: var(--Layout-White, #fff);
+}
+
+.notes {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 32px 0;
+  gap: 10px;
+}
+
+.note {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.note__checkbox-wrapper {
+  border-radius: 0px 2px 2px 0px;
+  border: 1px solid rgba(216, 218, 224, 1);
+  background-color: var(--Layout-BG, #f7f8fa);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.note__checkbox {
+  border-radius: 2px;
+  background: linear-gradient(180deg, #fff 0%, #f3f3f5 100%);
+  border: 1px solid rgba(196, 199, 209, 1);
+  width: 16px;
+  height: 16px;
+}
+
+.note__details {
+  border-radius: 2px 0px 0px 2px;
+  border: 1px solid rgba(216, 218, 224, 1);
+  background-color: var(--Layout-White, #fff);
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: var(--Text-Main, #434652);
+  font-weight: 400;
+  line-height: 143%;
+  flex-grow: 1;
+  padding: 0 3px 0 13px;
+}
+
+.note__text {
+  font-family: SF UI Display, sans-serif;
+  flex-grow: 1;
+  margin: auto 0;
+}
+
+.note__avatar {
+  aspect-ratio: 1;
+  width: 36px;
+  border-radius: 0px 2px 2px 0px;
+  border: 1px solid rgba(199, 28, 16, 1);
+}
+
+.notes__extra {
+  aspect-ratio: 10;
+  width: 359px;
+  margin-top: 10px;
+  max-width: 100%;
+}
+
+.notes__bottom {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 50px;
+}
+
+@media (max-width: 991px) {
+  .notes__bottom {
+    margin-bottom: 40px;
+  }
+}
